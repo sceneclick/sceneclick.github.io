@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="yandex-verification" content="e358f00454eb9f89">
+    <meta name="yandex-verification" content="5183244512dcf4b8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Инструкция по SceneClick – как записывать и воспроизводить клики</title>
     <meta name="description" content="Подробное руководство по программе SceneClick. Как записать сценарий, настроить горячие клавиши, сохранить и загрузить действия.">
@@ -224,18 +224,24 @@
             text-orientation: upright;
             letter-spacing: -5px;
         }
-        .section-title {
-            font-size: 2rem;
-            text-align: center;
-            margin: 40px 0 20px;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 5px;
+
+        /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            body { overflow-x: hidden; }
+            .logo { font-size: 2.5rem; }
+            .subtitle { font-size: 1rem; letter-spacing: 4px; }
+            h1 { font-size: 1.8rem !important; }
+            .main-container { padding: 10px; }
+            .cyber-button { padding: 10px 20px; font-size: 0.9rem; margin: 5px 2px !important; }
+            .card { padding: 15px; }
+            .footer { flex-direction: column; gap: 10px; text-align: center; }
+            .footer a { margin: 0 10px; }
         }
-        .section-title span {
-            color: #00ffff;
-            border-bottom: 2px solid #00ffff;
-            padding-bottom: 5px;
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem !important; }
+            .logo { font-size: 2rem; }
+            .subtitle { letter-spacing: 2px; }
+            .cyber-button { padding: 8px 12px; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -384,7 +390,7 @@
                 particle.style.animationDelay = Math.random() * 20 + 's';
                 particle.style.animationDuration = (10 + Math.random() * 20) + 's';
                 const colors = ['cyan', 'magenta', '#00ffff', '#ff00ff', '#ffff00'];
-                particle.style.background = colors[floor?]||Math.random()*colors.length)];
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
                 particle.style.boxShadow = `0 0 10px ${particle.style.background}`;
                 container.appendChild(particle);
             }
