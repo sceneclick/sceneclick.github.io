@@ -13,12 +13,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiIGJhc2VQcm9maWxlPSJiYXNpYyI+PHBhdGggZmlsbD0iIzkwYTRhZSIgZD0iTTM2LjE0OSwyNS4yNDJMMTguNTc5LDkuMDU1VjdoLTMuMTFjLTAuMDY1LDAuMDAzLTIuMTkyLTAuMDAzLTIuMTkyLDIuMTgydjI1LjgzOAljMCwxLjc1NCwxLjUyMywyLjEwNywyLjExNCwyLjEwOWgzLjE4NHYtMi4wOGwyLjY0OS0yLjQzbDMuOSw4LjkxOGMwLjM2NywwLjkyLDEuMjY0LDEuNDAzLDIuMTUzLDEuNDQ3VjQzaDN2LTEuMDZsMS41MTgtMC42ODIJYzAuNTI4LTAuMjM0LDAuOTI0LTAuNjU0LDEuMTE2LTEuMTg1YzAuMjAzLTAuNTU5LDAuMTU2LTEuMTc5LTAuMTE3LTEuNzE1bC00LjA2LTguNjk3bDYuMDk2LTAuNTcxbDAuMTUyLTAuMDI2CWMxLjI5Mi0wLjMxNywxLjY5OS0xLjEyNSwxLjgyOC0xLjU3OUMzNy4wMjMsMjYuNzI3LDM2Ljc3NCwyNS44NTYsMzYuMTQ5LDI1LjI0MnoiLz48cGF0aCBmaWxsPSIjZTBlMGUwIiBzdHJva2U9IiMzNzQ3NGYiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMjkuMTM3LDQxLjE1NmwtNC40ODItMTAuMjQ4bC01LjM3Nyw0LjkzMgljLTAuNjU2LDAuNTU5LTEuOTEyLDAuMzA3LTEuOTEyLTAuODIyVjkuMTgyYzAtMS4xNTQsMS4zMjUtMS41MTYsMi4wMzEtMC44MjJsMTkuMTIsMTcuNjE2YzAuNTc2LDAuNTY2LDAuNzIzLDEuNzYtMC43MTcsMi4xMTQJbC03LjUyOCwwLjcwNWw0LjY2LDkuOTgyYzAuMzMsMC42NDgsMC4wODIsMS4zMTEtMC40ODksMS41NjVsLTMuNTc0LDEuNjA2QzMwLjI5OCw0Mi4xNTIsMjkuNDE4LDQxLjg4NCwyOS4xMzcsNDEuMTU2eiIvPjwvc3ZnPg==">
     <style>
         /* ===== КИБЕРПАНК-СТИЛИ ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Orbitron', sans-serif;
             background: #0a0a0f;
@@ -27,8 +22,6 @@
             overflow-x: hidden;
             line-height: 1.6;
         }
-
-        /* Фоновые эффекты */
         .bg-container {
             position: fixed;
             top: 0;
@@ -37,7 +30,6 @@
             height: 100%;
             z-index: -1;
         }
-
         .bg-overlay {
             position: absolute;
             width: 100%;
@@ -47,7 +39,6 @@
                 radial-gradient(ellipse at 80% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
                 linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.9) 100%);
         }
-
         .grid-lines {
             position: absolute;
             width: 100%;
@@ -59,19 +50,16 @@
             animation: gridMove 30s linear infinite;
             opacity: 0.5;
         }
-
         @keyframes gridMove {
             0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
             100% { transform: perspective(500px) rotateX(60deg) translateY(50px); }
         }
-
         .particles {
             position: absolute;
             width: 100%;
             height: 100%;
             overflow: hidden;
         }
-
         .particle {
             position: absolute;
             width: 2px;
@@ -81,15 +69,12 @@
             box-shadow: 0 0 10px cyan;
             animation: float 20s infinite linear;
         }
-
         @keyframes float {
             0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
             10% { opacity: 1; }
             90% { opacity: 1; }
             100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
         }
-
-        /* Сканирующие линии */
         .scanlines {
             position: fixed;
             top: 0;
@@ -106,8 +91,6 @@
             );
             z-index: 10;
         }
-
-        /* Угловые элементы */
         .corner {
             position: fixed;
             width: 80px;
@@ -120,8 +103,6 @@
         .corner-tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
         .corner-bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
         .corner-br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
-
-        /* Основной контейнер */
         .main-container {
             position: relative;
             z-index: 30;
@@ -129,8 +110,6 @@
             margin: 0 auto;
             padding: 20px;
         }
-
-        /* Логотип */
         .logo {
             font-size: 3.5rem;
             font-weight: 900;
@@ -143,12 +122,10 @@
             margin-bottom: 10px;
             letter-spacing: 4px;
         }
-
         @keyframes neonPulse {
             0%, 100% { text-shadow: 0 0 20px cyan; }
             50% { text-shadow: 0 0 40px magenta; }
         }
-
         .subtitle {
             font-family: 'Rajdhani', sans-serif;
             text-align: center;
@@ -156,8 +133,6 @@
             letter-spacing: 8px;
             margin-bottom: 30px;
         }
-
-        /* Кнопки */
         .cyber-button {
             display: inline-block;
             padding: 16px 40px;
@@ -177,7 +152,6 @@
             text-decoration: none;
             box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
         }
-
         .cyber-button::before {
             content: '';
             position: absolute;
@@ -188,29 +162,23 @@
             background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
             transition: left 0.3s ease;
         }
-
         .cyber-button:hover {
             background: rgba(0, 255, 255, 0.1);
             box-shadow: 0 0 30px #00ffff;
             transform: scale(1.05);
         }
-
         .cyber-button:hover::before {
             left: 100%;
         }
-
         .cyber-button.download {
             border-color: #ff0064;
             color: #ff0064;
             box-shadow: 0 0 15px rgba(255, 0, 100, 0.3);
         }
-
         .cyber-button.download:hover {
             background: rgba(255, 0, 100, 0.1);
             box-shadow: 0 0 30px #ff0064;
         }
-
-        /* Карточки */
         .card {
             background: rgba(10, 10, 20, 0.7);
             backdrop-filter: blur(5px);
@@ -219,59 +187,47 @@
             padding: 25px;
             transition: all 0.3s ease;
         }
-
         .card:hover {
             border-color: #00ffff;
             box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
             transform: translateY(-5px);
         }
-
         .card h3 {
             color: #00ffff;
             font-size: 1.3rem;
             margin-bottom: 10px;
         }
-
-        /* Блок доверия */
         .trust-grid {
             display: flex;
             justify-content: center;
             gap: 50px;
             margin: 40px 0;
         }
-
         .trust-item {
             text-align: center;
         }
-
         .trust-number {
             font-size: 2.8rem;
             font-weight: 900;
             color: #00ffff;
             text-shadow: 0 0 20px cyan;
         }
-
         .trust-label {
             font-family: 'Rajdhani', sans-serif;
             color: #aaa;
             letter-spacing: 2px;
         }
-
-        /* Сетка преимуществ */
         .features-grid, .use-cases-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 25px;
             margin: 50px 0;
         }
-
         @media (min-width: 768px) {
             .features-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
         }
-
-        /* Футер */
         .footer {
             display: flex;
             justify-content: space-between;
@@ -281,19 +237,15 @@
             margin-top: 50px;
             color: #666;
         }
-
         .footer a {
             color: #00ffff;
             text-decoration: none;
             margin-left: 20px;
             transition: color 0.2s;
         }
-
         .footer a:hover {
             color: #ff00ff;
         }
-
-        /* Случайные цифры (атмосфера) */
         .random-digit {
             position: fixed;
             bottom: 20px;
@@ -305,24 +257,17 @@
             text-orientation: upright;
             letter-spacing: -5px;
         }
-
-        /* Заголовки секций */
-        .section-title {
+        h2.section-title {
             font-size: 2rem;
             text-align: center;
             margin: 40px 0 20px;
             color: #fff;
             text-transform: uppercase;
             letter-spacing: 5px;
-        }
-
-        .section-title span {
-            color: #00ffff;
             border-bottom: 2px solid #00ffff;
             padding-bottom: 5px;
+            display: inline-block; /* чтобы рамка была только под текстом */
         }
-
-        /* === Новый блок с инструкцией про антивирус === */
         .antivirus-note {
             max-width: 600px;
             margin-left: auto;
@@ -398,9 +343,7 @@
         <div style="text-align: center; margin: 40px 0;">
             <h1 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(135deg, #fff, #aaa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Освободи руки<br>от повторяющихся кликов</h1>
             <p style="max-width: 700px; margin: 0 auto 30px; color: #aaa;">SceneClick автоматизирует любые действия мышью, чтобы вы сосредоточились на важном. Работает там, где нужна монотонная рутина — заполнение форм, тестирование, обработка документов.</p>
-            <!-- Прямая ссылка на Яндекс.Диск -->
             <a href="https://disk.yandex.ru/d/HA8-rGDuaic9wg" class="cyber-button download">📥 Скачать бесплатно</a>
-            <!-- Блок с инструкцией про антивирус (раскрывающийся) -->
             <div class="antivirus-note">
                 <details>
                     <summary>🛡️ Антивирус ругается на установщик?</summary>
@@ -415,10 +358,10 @@
                 <img src="images/sceneclick.jpg" alt="SceneClick интерфейс" style="width:100%; border-radius: 4px;" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='[ Скриншот временно недоступен ]';">
             </div>
         </div>
-        
+
         <!-- Заголовок h2 для раздела преимуществ -->
         <h2 style="color: #00ffff; text-align: center; margin-bottom: 30px; font-size: 2rem;">Основные возможности</h2>
-        
+
         <!-- Преимущества (4 карточки) -->
         <div class="features-grid">
             <div class="card">
@@ -455,7 +398,7 @@
             </div>
         </div>
 
-        <!-- Сценарии использования -->
+        <!-- Сценарии использования – исправленный заголовок -->
         <h2 class="section-title">ДЛЯ ЧЕГО ПРИГОДИТСЯ</h2>
         <div class="use-cases-grid">
             <div class="card">
@@ -475,26 +418,26 @@
                 <p>Пакетное применение однотипных операций в графических редакторах, быстрое переключение инструментов и выполнение макросов.</p>
             </div>
         </div>
-        
+
+        <!-- Добавляем заголовок h2 перед блоком поддержки -->
+        <h2 style="color: #00ffff; text-align: center; margin-bottom: 20px;">Поддержать проект</h2>
         <div style="margin: 60px auto; max-width: 800px;">
-    <div class="card" style="padding: 30px; background: rgba(10,10,20,0.9); border: 1px solid rgba(255, 215, 0, 0.4); box-shadow: 0 0 30px rgba(255, 215, 0, 0.2); text-align: center;">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <span style="font-size: 4rem; filter: drop-shadow(0 0 10px gold);">🌐</span>
-            <div style="text-align: left; max-width: 500px;">
-                <h3 style="color: #ffd700; margin-bottom: 10px; font-size: 1.8rem;">Поддержите автора</h3>
-                <p style="color: #ccc; margin-bottom: 15px; font-size: 1.1rem;">
-                    Установите <strong>Яндекс.Браузер</strong> вместе с SceneClick — это современный браузер с нейросетями, встроенным переводчиком видео и текста. Если он уже есть, то обновится до последней версии.
-                </p>
-                <p style="color: #ffd700; font-weight: 600;">
-                    ⚡ Галочка в установщике уже стоит — просто оставьте её. Спасибо за поддержку!
-                </p>
+            <div class="card" style="padding: 30px; background: rgba(10,10,20,0.9); border: 1px solid rgba(255, 215, 0, 0.4); box-shadow: 0 0 30px rgba(255, 215, 0, 0.2); text-align: center;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <span style="font-size: 4rem; filter: drop-shadow(0 0 10px gold);">🌐</span>
+                    <div style="text-align: left; max-width: 500px;">
+                        <h3 style="color: #ffd700; margin-bottom: 10px; font-size: 1.8rem;">Поддержите автора</h3>
+                        <p style="color: #ccc; margin-bottom: 15px; font-size: 1.1rem;">
+                            Установите <strong>Яндекс.Браузер</strong> вместе с SceneClick — это современный браузер с нейросетями, встроенным переводчиком видео и текста. Если он уже есть, то обновится до последней версии.
+                        </p>
+                        <p style="color: #ffd700; font-weight: 600;">
+                            ⚡ Галочка в установщике уже стоит — просто оставьте её. Спасибо за поддержку!
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- Опциональная кнопка, если хотите дать ссылку на подробнее -->
-        <!-- <a href="https://browser.yandex.ru" target="_blank" class="cyber-button" style="margin-top: 20px; border-color: #ffd700; color: #ffd700;">Узнать больше</a> -->
-    </div>
-</div>
-        
+
         <!-- Финальная кнопка -->
         <div style="text-align: center; margin: 60px 0;">
             <a href="https://disk.yandex.ru/d/HA8-rGDuaic9wg" class="cyber-button download">🚀 Скачать SceneClick</a>
@@ -513,7 +456,6 @@
     </div>
 
     <script>
-        // Генерация частиц
         function createParticles() {
             const container = document.getElementById('particles');
             for (let i = 0; i < 100; i++) {
@@ -522,7 +464,6 @@
                 particle.style.left = Math.random() * 100 + '%';
                 particle.style.animationDelay = Math.random() * 20 + 's';
                 particle.style.animationDuration = (10 + Math.random() * 20) + 's';
-                // Случайный цвет
                 const colors = ['cyan', 'magenta', '#00ffff', '#ff00ff', '#ffff00'];
                 particle.style.background = colors[Math.floor(Math.random() * colors.length)];
                 particle.style.boxShadow = `0 0 10px ${particle.style.background}`;
@@ -530,8 +471,6 @@
             }
         }
         createParticles();
-
-        // Небольшой эффект при наведении на кнопки (можно добавить звук, но без аудио)
     </script>
 </body>
 </html>
