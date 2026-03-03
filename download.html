@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="yandex-verification" content="e358f00454eb9f89">
+    <meta name="yandex-verification" content="5183244512dcf4b8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Скачать SceneClick – последняя версия автокликера (Windows)</title>
     <meta name="description" content="Скачайте последнюю версию SceneClick для Windows. Прямая ссылка на установщик, системные требования, инструкция по установке. Бесплатно.">
@@ -10,7 +10,7 @@
     <link rel="icon" type="image/x-icon" href="/images/sceneclick.ico">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiIGJhc2VQcm9maWxlPSJiYXNpYyI+PHBhdGggZmlsbD0iIzkwYTRhZSIgZD0iTTM2LjE0OSwyNS4yNDJMMTguNTc5LDkuMDU1VjdoLTMuMTFjLTAuMDY1LDAuMDAzLTIuMTkyLTAuMDAzLTIuMTkyLDIuMTgydjI1LjgzOAljMCwxLjc1NCwxLjUyMywyLjEwNywyLjExNCwyLjEwOWgzLjE4NHYtMi4wOGwyLjY0OS0yLjQzbDMuOSw4LjkxOGMwLjM2NywwLjkyLDEuMjY0LDEuNDAzLDIuMTUzLDEuNDQ3VjQzaDN2LTEuMDZsMS41MTgtMC42ODIJYzAuNTI4LTAuMjM0LDAuOTI0LTAuNjU0LDEuMTE2LTEuMTg1YzAuMjAzLTAuNTU5LDAuMTU2LTEuMTc5LTAuMTE3LTEuNzE1bC00LjA2LTguNjk3bDYuMDk2LTAuNTcxbDAuMTUyLTAuMDI2CWMxLjI5Mi0wLjMxNywxLjY5OS0xLjEyNSwxLjgyOC0xLjU3OUMzNy4wMjMsMjYuNzI3LDM2Ljc3NCwyNS44NTYsMzYuMTQ5LDI1LjI0MnoiLz48cGF0aCBmaWxsPSIjZTBlMGUwIiBzdHJva2U9IiMzNzQ3NGYiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMjkuMTM3LDQxLjE1NmwtNC40ODItMTAuMjQ4bC01LjM3Nyw0LjkzMgljLTAuNjU2LDAuNTU5LTEuOTEyLDAuMzA3LTEuOTEyLTAuODIyVjkuMTgyYzAtMS4xNTQsMS4zMjUtMS41MTYsMi4wMzEtMC44MjJsMTkuMTIsMTcuNjE2YzAuNTc2LDAuNTY2LDAuNzIzLDEuNzYtMC43MTcsMi4xMTQJbC03LjUyOCwwLjcwNWw0LjY2LDkuOTgyYzAuMzMsMC42NDgsMC4wODIsMS4zMTEtMC40ODksMS41NjVsLTMuNTc0LDEuNjA2QzMwLjI5OCw0Mi4xNTIsMjkuNDE4LDQxLjg4NCwyOS4xMzcsNDEuMTU2eiIvPjwvc3ZnPg==">
     <style>
-        /* ===== КИБЕРПАНК-СТИЛИ (точно такие же, как на главной) ===== */
+        /* ===== КИБЕРПАНК-СТИЛИ (те же, что на главной) ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Orbitron', sans-serif;
@@ -224,18 +224,24 @@
             text-orientation: upright;
             letter-spacing: -5px;
         }
-        .section-title {
-            font-size: 2rem;
-            text-align: center;
-            margin: 40px 0 20px;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 5px;
+
+        /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            body { overflow-x: hidden; }
+            .logo { font-size: 2.5rem; }
+            .subtitle { font-size: 1rem; letter-spacing: 4px; }
+            h1 { font-size: 1.8rem !important; }
+            .main-container { padding: 10px; }
+            .cyber-button { padding: 10px 20px; font-size: 0.9rem; margin: 5px 2px !important; }
+            .card { padding: 15px; }
+            .footer { flex-direction: column; gap: 10px; text-align: center; }
+            .footer a { margin: 0 10px; }
         }
-        .section-title span {
-            color: #00ffff;
-            border-bottom: 2px solid #00ffff;
-            padding-bottom: 5px;
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem !important; }
+            .logo { font-size: 2rem; }
+            .subtitle { letter-spacing: 2px; }
+            .cyber-button { padding: 8px 12px; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -256,7 +262,7 @@
         <div class="logo">SCENECLICK</div>
         <div class="subtitle">◈ АВТОМАТИЗАЦИЯ КЛИКОВ ◈</div>
 
-        <!-- Навигация (ссылки на другие страницы) -->
+        <!-- Навигация -->
         <div style="text-align: center; margin: 30px 0;">
             <a href="index.html" class="cyber-button" style="margin: 5px;">Главная</a>
             <a href="download.html" class="cyber-button" style="margin: 5px;">Скачать</a>
@@ -302,7 +308,7 @@
             </div>
         </div>
 
-        <!-- Футер (как на главной) -->
+        <!-- Футер -->
         <div class="footer">
             <div>© 2025 MouseTools</div>
             <div>
