@@ -10,7 +10,7 @@
     <link rel="icon" type="image/x-icon" href="/images/sceneclick.ico">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiIGJhc2VQcm9maWxlPSJiYXNpYyI+PHBhdGggZmlsbD0iIzkwYTRhZSIgZD0iTTM2LjE0OSwyNS4yNDJMMTguNTc5LDkuMDU1VjdoLTMuMTFjLTAuMDY1LDAuMDAzLTIuMTkyLTAuMDAzLTIuMTkyLDIuMTgydjI1LjgzOAljMCwxLjc1NCwxLjUyMywyLjEwNywyLjExNCwyLjEwOWgzLjE4NHYtMi4wOGwyLjY0OS0yLjQzbDMuOSw4LjkxOGMwLjM2NywwLjkyLDEuMjY0LDEuNDAzLDIuMTUzLDEuNDQ3VjQzaDN2LTEuMDZsMS41MTgtMC42ODIJYzAuNTI4LTAuMjM0LDAuOTI0LTAuNjU0LDEuMTE2LTEuMTg1YzAuMjAzLTAuNTU5LDAuMTU2LTEuMTc5LTAuMTE3LTEuNzE1bC00LjA2LTguNjk3bDYuMDk2LTAuNTcxbDAuMTUyLTAuMDI2CWMxLjI5Mi0wLjMxNywxLjY5OS0xLjEyNSwxLjgyOC0xLjU3OUMzNy4wMjMsMjYuNzI3LDM2Ljc3NCwyNS44NTYsMzYuMTQ5LDI1LjI0MnoiLz48cGF0aCBmaWxsPSIjZTBlMGUwIiBzdHJva2U9IiMzNzQ3NGYiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMjkuMTM3LDQxLjE1NmwtNC40ODItMTAuMjQ4bC01LjM3Nyw0LjkzMgljLTAuNjU2LDAuNTU5LTEuOTEyLDAuMzA3LTEuOTEyLTAuODIyVjkuMTgyYzAtMS4xNTQsMS4zMjUtMS41MTYsMi4wMzEtMC44MjJsMTkuMTIsMTcuNjE2YzAuNTc2LDAuNTY2LDAuNzIzLDEuNzYtMC43MTcsMi4xMTQJbC03LjUyOCwwLjcwNWw0LjY2LDkuOTgyYzAuMzMsMC42NDgsMC4wODIsMS4zMTEtMC40ODksMS41NjVsLTMuNTc0LDEuNjA2QzMwLjI5OCw0Mi4xNTIsMjkuNDE4LDQxLjg4NCwyOS4xMzcsNDEuMTU2eiIvPjwvc3ZnPg==">
     <style>
-        /* ===== КИБЕРПАНК-СТИЛИ (те же, что на главной) ===== */
+        /* ===== КИБЕРПАНК-СТИЛИ ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Orbitron', sans-serif;
@@ -229,8 +229,8 @@
         .nav-links {
             display: inline-block;
             border-bottom: 2px solid #00ffff;
-            padding-bottom: 5px;
-            margin-bottom: 30px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
         .nav-links .cyber-button {
             margin: 5px 2px !important;
@@ -241,6 +241,11 @@
             margin: 30px 0;
         }
 
+        /* Увеличенный отступ для списков внутри карточек */
+        .card ol, .card ul {
+            padding-left: 30px;
+        }
+
         /* Мобильная адаптация */
         @media (max-width: 768px) {
             body { overflow-x: hidden; }
@@ -248,7 +253,7 @@
             .subtitle { font-size: 1rem; letter-spacing: 4px; }
             h1 { 
                 font-size: 1.8rem !important; 
-                margin-top: 20px !important; 
+                margin-top: 0 !important; 
             }
             .main-container { padding: 10px; }
             .cyber-button { padding: 10px 20px; font-size: 0.9rem; }
@@ -258,11 +263,14 @@
             .card ol, .card ul {
                 padding-left: 25px;
             }
+            .nav-links {
+                margin-bottom: 20px;
+            }
         }
         @media (max-width: 480px) {
             h1 { 
                 font-size: 1.5rem !important; 
-                margin-top: 15px !important; 
+                margin-top: 0 !important; 
             }
             .logo { font-size: 2rem; }
             .subtitle { letter-spacing: 2px; }
@@ -308,7 +316,7 @@
 
         <!-- Содержимое страницы "Инструкция" -->
         <div style="margin: 40px auto; max-width: 800px;">
-            <h1 style="font-size: 2.5rem; text-align: center; color: #00ffff; margin-bottom: 30px;">Инструкция по использованию</h1>
+            <h1 style="font-size: 2.5rem; text-align: center; color: #00ffff; margin-bottom: 30px; margin-top: 0;">Инструкция по использованию</h1> <!-- убран верхний отступ -->
             
             <div class="card" style="margin-bottom: 20px;">
                 <h2 style="color: #00ffff;">1. Быстрый старт</h2>
